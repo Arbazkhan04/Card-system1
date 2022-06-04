@@ -1,0 +1,27 @@
+<div class="container mt-5">
+   <div class="row">
+       <div class="col-4 my-5" *ngFor="let _data of MyArray">
+        <div class="card shadow" style="width: 18rem;">
+            <img class="card-img-top" [src]="_data.image1" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{_data.Name}}</h5>
+              <p class="card-text"> {{_data.descri}} </p>
+              <h3 class="text-success">Total Quantity : {{_data.qty}} </h3>
+              <span *ngIf="_data.qty!==0">
+                <h4 class="text-info"><i class="fa-solid fa-circle-check" ></i></h4>
+                <h4 class="text-info">
+                  {{_data.qty!==0 ? 'In Stock':''}}
+                </h4>
+              </span>
+              <span *ngIf="_data.qty==0">
+                <h4 class="text-danger"><i class="fa-solid fa-circle-xmark"></i></h4>
+                <h4 class="text-danger">
+                  {{_data.qty==0?'Out Of Stock':''}}
+                </h4>
+              </span>
+              <button type="button" class="btn btn-outline-success w-100" [ngClass]="_data.qty===0? 'btn btn-outline-danger':'btn btn-outline-info' " [disabled]="_data.qty==0">Add to Card</button>
+            </div>
+          </div>
+       </div>
+   </div>
+</div>
