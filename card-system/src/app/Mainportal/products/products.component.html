@@ -19,7 +19,7 @@
                   {{_data.qty==0?'Out Of Stock':''}}
                 </h4>
               </span>
-              <button type="button" class="btn btn-outline-success w-100" [ngClass]="_data.qty===0? 'btn btn-outline-danger':'btn btn-outline-info' " [disabled]="_data.qty==0">Add to Card</button>
+              <button type="button" class="btn btn-outline-success w-100" (click)="goToViewProducts(_data.id)" [ngClass]="_data.qty===0? 'btn btn-outline-danger':'btn btn-outline-info' " [disabled]="_data.qty==0">Add to Card</button>
             </div>
           </div>
        </div>
