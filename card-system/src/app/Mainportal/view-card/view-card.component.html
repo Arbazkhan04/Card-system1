@@ -1,1 +1,8 @@
-<p>view-card works!</p>
+<div class="container">
+    <h1>Name: {{FilteredArray[0].Name}}</h1>
+    <h3>Quantity: {{FilteredArray[0].qty}}</h3>
+    <p>Description: {{FilteredArray[0].descri}}</p>
+    <img *ngFor="let img of FilteredArray[0].image" [src]="img" alt="">
+    <!-- <p>{{_Data}}</p> -->
+    <p></p>
+</div>

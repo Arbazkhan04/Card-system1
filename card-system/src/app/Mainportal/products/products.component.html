@@ -2,7 +2,7 @@
    <div class="row">
        <div class="col-4 my-5" *ngFor="let _data of MyArray">
         <div class="card shadow" style="width: 18rem;">
-            <img class="card-img-top" [src]="_data.image1" alt="Card image cap">
+            <img class="card-img-top" [src]="_data.image[0]" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{_data.Name}}</h5>
               <p class="card-text"> {{_data.descri}} </p>
