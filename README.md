@@ -1,2 +1,2 @@
 # Card-system
-I am going to dynamic cards in Angular
+I am going to make a  dynamic cards in Angular
